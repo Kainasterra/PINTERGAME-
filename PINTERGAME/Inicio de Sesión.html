@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">PINTERGAME</a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Juegos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="login container">
+        <h2>Inicio de Sesión</h2>
+        <div class="login-content">
+            <form action="/login" method="POST">
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" class="btn-3" value="Iniciar Sesión">
+            </form>
+            <p>
+                ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="register container">
+        <h2>Registro de Usuario</h2>
+        <div class="register-content">
+            <form action="/register" method="POST">
+                <input type="text" name="name" placeholder="Nombre Completo" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="password" name="confirm_password" placeholder="Confirmar Contraseña" required>
+                <input type="submit" class="btn-3" value="Registrarse">
+            </form>
+            <p>
+                ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="profile container">
+        <h2>Gestión de Perfil</h2>
+        <div class="profile-content">
+            <form action="/profile" method="POST">
+                <input type="text" name="name" placeholder="Nombre Completo" value="Nombre Actual" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" value="correo@actual.com" required>
+                <input type="password" name="password" placeholder="Nueva Contraseña (opcional)">
+                <input type="submit" class="btn-3" value="Guardar Cambios">
+            </form>
+        </div>
+    </section>
+
+    <section class="reviews container">
+        <h2>Reseñas de Videojuegos</h2>
+        <div class="reviews-content">
+            <form action="/review" method="POST">
+                <input type="text" name="game" placeholder="Nombre del Juego" required>
+                <textarea name="review" placeholder="Escribe tu reseña" required></textarea>
+                <select name="rating" required>
+                    <option value="">Calificación</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <input type="submit" class="btn-3" value="Publicar Reseña">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <div class="link">
+            <a href="#" class="logo">PINTERGAME</a>
+        </div>
+        <div class="link">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
