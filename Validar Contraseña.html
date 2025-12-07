@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Contraseña</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">Logo</a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                    <li><a href="Inicio de Sesión.html">Registro/Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="modal container">
+        <div class="modal-content">
+            <h2>Validar Contraseña</h2>
+            <p>Por favor, ingresa la contraseña para agregar un producto:</p>
+            <form action="productos.html" method="POST" onsubmit="return validarContraseña()">
+                <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-3">Validar</button>
+                <button type="button" class="btn-3" onclick="window.location.href='productos.html'">Cancelar</button>
+            </form>
+            <p id="error-message" style="color: red; display: none;">Contraseña incorrecta. Intenta de nuevo.</p>
+        </div>
+    </section>
+
+    <footer class="footer container">
+        <p>&copy; 2024 PINGTERGAME. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function validarContraseña() {
+            const password = document.getElementById("password").value;
+            if (password === "PINTERGAME") {
+                alert("Contraseña correcta. Procediendo a agregar producto.");
+                return true; // Redirige al formulario de agregar productos
+            } else {
+                document.getElementById("error-message").style.display = "block";
+                return false; // Previene el envío del formulario
+            }
+        }
+    </script>
+</body>
+
+</html>
